@@ -36,11 +36,11 @@ app.post('/input', (req, res, next) => {
 });
 
 app.get('/result', (req, res, next) => {
-	db.get(parseInt(a)%10, (err, paraa) => {
+	db.get(parseInt(a), (err, paraa) => {
 		if (err) return next(err);
-		db.get(parseInt(b)%10, (err, parab) => {
+		db.get(parseInt(b), (err, parab) => {
 			if (err) return next(err);
-			db.get(parseInt(c)%10, (err, parac) => {
+			db.get(parseInt(c), (err, parac) => {
 				if (err) return next(err);
 			let response = result;
 			response = replace(response, "name", name);
@@ -52,6 +52,8 @@ app.get('/result', (req, res, next) => {
 			response = replace(response, "question1", paraa.question);
 			response = replace(response, "question2", parab.question);
 			response = replace(response, "question3", parac.question);
+			console.log(parac.question);
+			console.log(parac.main);
 			res.send(response);
 			});	
 		});
