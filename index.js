@@ -29,9 +29,12 @@ app.post('/input', (req, res, next) => {
 	name=req.body.name;
 	clss=req.body.clss;
 	school=req.body.school;
-	a=req.body.a;
-	b=req.body.b;
-	c=req.body.c;
+	a=Math.trunc(Math.random() * 3 + 3*req.body.a + 1);
+	b=Math.trunc(Math.random() * 3 + 3*req.body.b + 1);
+	c=Math.trunc(Math.random() * 3 + 3*req.body.c + 1);
+	console.log(a+" "+(parseInt(req.body.a)+1));
+	console.log(b+" "+(parseInt(req.body.b)+1));
+	console.log(c+" "+(parseInt(req.body.c)+1));
 	res.redirect("/result");
 });
 
