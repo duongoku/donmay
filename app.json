@@ -1,0 +1,8 @@
+{
+  "name": "donmay",
+  "description": "Nhấn nút phụt đơn",
+  "repository": "https://github.com/duongoku/donmay",
+  "logo": "https://seeklogo.com/images/D/dota-2-logo-A8CAC9B4C9-seeklogo.com.png",
+  "keywords": ["node", "express", "donmay"],
+  "image": "heroku/nodejs"
+}
