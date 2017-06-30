@@ -52,8 +52,6 @@ app.get('/result', (req, res, next) => {
 			response = replace(response, "question1", paraa.question);
 			response = replace(response, "question2", parab.question);
 			response = replace(response, "question3", parac.question);
-			console.log(parac.question);
-			console.log(parac.main);
 			res.send(response);
 			});	
 		});
