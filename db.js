@@ -5,17 +5,22 @@ const db = new nedb({
 	autoload: true
 });
 
+const fs = require('fs');
+const p1 = fs.readFileSync('paragraphs/p1.txt', 'utf-8');
+const p2 = fs.readFileSync('paragraphs/p2.txt', 'utf-8');
+const p3 = fs.readFileSync('paragraphs/p3.txt', 'utf-8');
+
 const defaultData = [
-	{ _id: 1, main: "1.Can the jargon score? "},
-	{ _id: 2, main: "2.This referendum disappears against each acorn! "},
-	{ _id: 3, main: "3.The episode moans above the go censorship. "},
-	{ _id: 4, main: "4.Her scenario fields a circular mania. "},
-	{ _id: 5, main: "5.The instinct trigger discriminates beside the isolate taxi. "},
-	{ _id: 6, main: "6.The recovered anguish begs the accountant above each bull matrix. "},
-	{ _id: 7, main: "7.My audience appears. "},
-	{ _id: 8, main: "8.An assault volunteers without the satellite. "},
-	{ _id: 9, main: "9.Near a researcher talks the brick. "},
-	{ _id: 10, main: "10.The spread clearance slides beside the institute. "}
+	{ _id: 1, main: p1},
+	{ _id: 2, main: p2},
+	{ _id: 3, main: p3},
+	{ _id: 4, main: ""},
+	{ _id: 5, main: ""},
+	{ _id: 6, main: ""},
+	{ _id: 7, main: ""},
+	{ _id: 8, main: ""},
+	{ _id: 9, main: ""},
+	{ _id: 10, main: ""}
 ];
 
 db.count({}, (err, count) => {
