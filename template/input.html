@@ -2,30 +2,85 @@
 <head>
    <title>Đơn máy</title>
 </head>
+   <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png">
    <style>
       body{
+/*         background-image: url("http://i.imgur.com/Eu2khon.png");
+         background-attachment: fixed;
+         background-repeat: no-repeat;
+         background-size: 300px 300px;
+         background-position: right bottom;*/
          background-color: lightblue;
       }
+   .myButton {
+      background-color:#f01d1d;
+      -moz-border-radius:28px;
+      -webkit-border-radius:28px;
+      border-radius:28px;
+      display:inline-block;
+      cursor:pointer;
+      color:#f7ec11;
+      font-family:Courier;
+      font-size:15px;
+      font-weight:bold;
+      font-style:italic;
+      padding:10px 23px;
+      text-decoration:none;
+      text-shadow:0px 1px 0px #2f6627;
+   }
+   .myButton:hover {
+      background-color:#5cbf2a;
+   }
+   .myButton:active {
+      position:relative;
+      top:1px;
+   }
+   .myInput {
+      background-color:#278a05;
+      -moz-border-radius:28px;
+      -webkit-border-radius:28px;
+      border-radius:28px;
+      display:inline-block;
+      cursor:pointer;
+      font-weight: bold;
+      color:#fcfcfc;
+      font-family:Courier;
+      font-size:15px;
+      padding:2px 23px;
+      text-decoration:none;
+   }
+   .myInput:hover {
+      background-color:#268a05;
+   }
+   .myInput:active {
+      position:relative;
+      top:1px;
+   }
+   .myBorder {
+      border-radius:10px;
+   }
    </style>
    <body>
-      <img src = "http://i.imgur.com/LaDdqdA.png"/>
-      <img src = "http://i.imgur.com/YEG4OoV.png" width="360" height="250"/>
-      <img src = "http://i.imgur.com/Eu2khon.png" width="250" height="250"/>
-      <br/>
+      <a href = "/"><img src = "http://i.imgur.com/LaDdqdA.png"/></a>
+          <!-- <a href = "https://vi.wikipedia.org/wiki/%C4%90%E1%BA%A3ng_C%E1%BB%99ng_s%E1%BA%A3n_Vi%E1%BB%87t_Nam"><img style = "margin-left: 249px" src = "http://i.imgur.com/YEG4OoV.png" width="360" height="250"/></a> -->
+          <a href ="https://vi.wikipedia.org/wiki/%C4%90o%C3%A0n_Thanh_ni%C3%AAn_C%E1%BB%99ng_s%E1%BA%A3n_H%E1%BB%93_Ch%C3%AD_Minh"><img style = "margin-left: 315px" src = "http://i.imgur.com/Eu2khon.png" width="250" height="250"/></a>
+      <br><br>
+      <!-- <audio loop="" repeat="" preload="" continuous="" autoplay="">
+      <source src="C:\duongoku\GithubProjects\donmay\ThanhNien.mp3" type="audio/mpeg" >
+      </audio> -->
       <form action="/input" method="post">
-         <fieldset>
+         <fieldset class="myBorder">
             <label>Họ và tên:</label>
-            <input type="text" name="name" placeholder="Nguyễn Xuân Phúc" />
-            <br/>
+            <input class="myInput" type="text" name="name"/>
+            <br><br>
             <label>Lớp:</label>
-            <input type="text" name="clss" placeholder="Cảm tình ĐẢNG" />
-            <br/>
+            <input class="myInput" type="text" name="clss"/>
+            <br><br>
             <label>Trường:</label>
-            <input type="text" name="school" placeholder="Đại Học Kinh Tế Quốc Dân" />
-            <br/>
+            <input class="myInput" type="text" name="school"/>
+            <br><br>
             <label>Câu hỏi 1:</label>
-            <select name = "a" class = "category">
-               <option value="69">Chọn 1 câu hỏi</option>
+            <select class="myInput" name = "a" class = "category">
                <option value="0">Những truyền thống quý báu của Đoàn Thanh niên Cộng sản Hồ Chí Minh là gì?</option>
                <option value="1">Đoàn viên TNCS Hồ Chí Minh có mấy nhiệm vụ?</option>
                <option value="2">Lí tưởng của Đoàn Thanh niên Cộng sản Hồ Chí Minh và thanh niên Việt Nam là gì?</option>
@@ -35,12 +90,10 @@
                <option value="6">Những nội dung cơ bản của phong trào"thi đua, tình nguyện xây dựng và bảo vệ tổ quốc" là gì?</option>
                <option value="7">Các phong trào lớn của Đoàn trong giai đoạn lịch sử là gì?</option>
                <option value="8">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn Thanh niên cộng sản Hồ Chí Minh trải qua 6 lần đổi tên gọi.</option>
-               <option value="9">NULL ahihi</option>
             </select>
-            <br/>
+            <br><br>
             <label>Câu hỏi 2:</label>
-            <select name = "b" class = "category">
-               <option value="69">Chọn 1 câu hỏi</option>
+            <select class="myInput" name = "b" class = "category">
                <option value="0">Những truyền thống quý báu của Đoàn Thanh niên Cộng sản Hồ Chí Minh là gì?</option>
                <option value="1">Đoàn viên TNCS Hồ Chí Minh có mấy nhiệm vụ?</option>
                <option value="2">Lí tưởng của Đoàn Thanh niên Cộng sản Hồ Chí Minh và thanh niên Việt Nam là gì?</option>
@@ -50,12 +103,10 @@
                <option value="6">Những nội dung cơ bản của phong trào"thi đua, tình nguyện xây dựng và bảo vệ tổ quốc" là gì?</option>
                <option value="7">Các phong trào lớn của Đoàn trong giai đoạn lịch sử là gì?</option>
                <option value="8">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn Thanh niên cộng sản Hồ Chí Minh trải qua 6 lần đổi tên gọi.</option>
-               <option value="9">NULL ahihi</option>
             </select>
-            <br/>
+            <br><br>
             <label>Câu hỏi 3:</label>
-            <select name = "c" class = "category">
-               <option value="69">Chọn 1 câu hỏi</option>
+            <select class="myInput" name = "c" class = "category">
                <option value="0">Những truyền thống quý báu của Đoàn Thanh niên Cộng sản Hồ Chí Minh là gì?</option>
                <option value="1">Đoàn viên TNCS Hồ Chí Minh có mấy nhiệm vụ?</option>
                <option value="2">Lí tưởng của Đoàn Thanh niên Cộng sản Hồ Chí Minh và thanh niên Việt Nam là gì?</option>
@@ -65,9 +116,12 @@
                <option value="6">Những nội dung cơ bản của phong trào"thi đua, tình nguyện xây dựng và bảo vệ tổ quốc" là gì?</option>
                <option value="7">Các phong trào lớn của Đoàn trong giai đoạn lịch sử là gì?</option>
                <option value="8">Đồng chí hãy giải thích và nói lên cảm nhận của mình đối với việc Đoàn Thanh niên cộng sản Hồ Chí Minh trải qua 6 lần đổi tên gọi.</option>
-               <option value="9">NULL ahihi</option>
             </select>
-            <input type="submit" value="Tạo đơn!" />
+            <br><br>
+            <audio loop="" repeat="" preload="" continuous="" autoplay="">
+            <source src="C:\duongoku\GithubProjects\donmay\ThanhNien.mp3" type="audio/mpeg" >
+            </audio>
+            <input class="myButton" type="submit" value="Tạo đơn!"/>
          </fieldset>
       </form>
    </body>

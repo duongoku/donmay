@@ -1,6 +1,0 @@
-var html = '<form action="/" method="post">' +
-               'Enter your name:' +
-               '<input type="text" name="userName"/>' +
-               '<br>' +
-               '<button type="submit">Submit</button>' +
-            '</form>';

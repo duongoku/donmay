@@ -29,9 +29,11 @@ app.post('/input', (req, res, next) => {
 	name=req.body.name;
 	clss=req.body.clss;
 	school=req.body.school;
+	do{
 	a=Math.trunc(Math.random() * 3 + 3*req.body.a + 1);
 	b=Math.trunc(Math.random() * 3 + 3*req.body.b + 1);
 	c=Math.trunc(Math.random() * 3 + 3*req.body.c + 1);
+	}while(a==b||b==c||a==c);
 	console.log(a+" "+(parseInt(req.body.a)+1));
 	console.log(b+" "+(parseInt(req.body.b)+1));
 	console.log(c+" "+(parseInt(req.body.c)+1));
