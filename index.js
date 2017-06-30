@@ -6,6 +6,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/public'));
+
+app.set('port', (process.env.PORT || 5000));
 
 const db = require('./db');
 const result = fs.readFileSync('template/result.html', 'utf-8');
@@ -50,6 +53,6 @@ app.get('/result', (req, res, next) => {
 	});
 });
 
-app.listen(5000, () => {
+app.listen(app.get('port'), () => {
 	console.log("Running at localhost");
 });
